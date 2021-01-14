@@ -1,0 +1,19 @@
+[{
+    "id":1,
+    "name":"Nakhon Si Thammarat",
+    "coordinate":{
+        "lon":103.120811,
+        "lat":14.60592
+    },
+    "country":"th"
+},
+{
+    "id":2,
+    "name":"Changwat Lop Buri",
+    "coordinate":{
+        "lon":100.75,
+        "lat":14.93333
+    },
+    "country":"th"
+}
+]

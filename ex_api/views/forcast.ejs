@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 txt-center">
+                <h2 class="alert-secondary p-3">พยากรณ์อากาศ</h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="blockquote mt-2 ml-2 float-left">
+                                    <%= forcastObj.name %> 
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-normal float-right" onclick="goHome()">
+                                < ย้อนกลับ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">พยากรณ์อากาศวันนี้</h5>
+                        <ul>
+                            <li class="dropdown-divider mr-5"></li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://openweathermap.org/img/w/<%= forcastObj.weather[0].icon %>.png" alt="icon" class="img-thumbnail">
+                            </div>
+                            <div class="col-8 text-left">
+                                <div class="ml-3">สภาพอากาศ <%= forcastObj.weather[0].description %> </div>
+                                <div class="ml-3">อุณหภูมิ <%= forcastObj.main.temp %> องศาเซลเซียส </div>
+                                <div class="ml-3">ความชื้น <%= forcastObj.main.humidity %> เปอร์เซ็นต์ </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>
